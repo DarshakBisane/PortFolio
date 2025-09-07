@@ -287,10 +287,36 @@
         .about .card{
             padding:24px
         }
-
+        .cards{
+           
+            display: flex;
+            flex-wrap: nowrap;
+            background:var(--card); 
+            border:1px solid var(--stroke); 
+            border-radius:var(--radius); 
+            box-shadow:var(--shadow)
+        }
+        .lang{
+            width: 25%;
+            height: 200px;
+        }
+        .lang img{
+            height: 200px;
+            position: relative;
+        }
+        .lang span{
+            width: 25%;
+            align-content: center;
+        }
+        .name{
+            margin: 0%;
+            position: relative;
+            top: 30px;
+            display: flex;
+            height: 10px;
+        }
         .skills .tags{
             display:flex; 
-            flex-wrap:wrap; 
             gap:10px
         }
         .tag{
@@ -403,21 +429,41 @@
         </section>
 
         <!-- SKILLS -->
-        <section id="skills" class="skills">
-          <div class="card" style="padding:24px">
-            <h2 style="margin-top:0">Skills</h2>
-            <div class="lang"></div>
-            <div class="lang"></div>
-            <div class="lang"></div>
-            <div class="lang"></div>
-          </div>
-          <div class="card">
-            <div class="lang"></div>
-            <div class="lang"></div>
-            <div class="lang"></div>
-            <div class="lang"></div>
-          </div>
-        </section>
+<section id="skills" class="skills">
+    <div>
+    <h2 style="margin-top:0">Skills</h2>
+
+    <div class="name">
+        <div class="lang"><span>CSS</span></div>
+        <div class="lang"><span>HTML</span></div>
+        <div class="lang"><span>JAVASCRIPT</span></div>
+        <div class="lang"><span>PHP</span></div>
+        <div class="lang"><span>SQL</span></div>
+        <div class="lang"><span>JAVA</span></div>
+        <div class="lang"><span>PYTHON</span></div>
+        <div class="lang"><span>GIT & GITHUB</span></div>
+    </div>
+    <div class="cards">
+
+        <div class="lang"><img src="assets/html.png" alt=""></div>
+
+        <div class="lang"><img src="assets/css.png" alt=""></div>
+
+        <div class="lang"><img src="assets/javascript.png" alt=""></div>
+
+        <div class="lang"><img src="assets/php.png" alt=""></div>
+
+        <div class="lang"><img src="assets/java.png" alt=""></div>
+
+        <div class="lang"><img src="assets/python.png" alt=""></div>
+
+        <div class="lang"><img src="assets/sql.png" alt=""></div>
+
+        <div class="lang"><img src="assets/git.png" alt=""></div>
+    </div>
+    </div>
+</section>
+
 
         <!-- PROJECTS -->
         <section id="projects" class="projects">
