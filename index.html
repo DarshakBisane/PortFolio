@@ -13,7 +13,7 @@
           --bg-2: #0f1731;
           --text: #e9ecf1;
           --muted: #a9b3c8;
-          --brand: #7c5cff;
+          --brand: #091387;
           --brand-2: #00e5ff;
           --card: rgba(255,255,255,0.06);
           --stroke: rgba(255,255,255,0.1);
@@ -33,8 +33,8 @@
             margin:0;
             font-family:'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell;
             color:var(--text); 
-            background: radial-gradient(1200px 800px at 80% -10%, #15224d 0%, transparent 60%),
-                            radial-gradient(900px 600px at -10% 10%, #1c2b66 0%, transparent 60%),
+            background: radial-gradient(1200px 800px at 80% -10%, #0d1b47 0%, transparent 60%),
+                            radial-gradient(900px 600px at -10% 10%, #051349 0%, transparent 60%),
                             linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
             background-attachment: fixed;
         }
@@ -51,7 +51,7 @@
 
         header{
           position:sticky; top:0; z-index:50; backdrop-filter:saturate(140%) blur(10px);
-          background:linear-gradient(180deg, rgba(14,18,38,.8), rgba(14,18,38,.3));
+          background:linear-gradient(180deg, rgba(5, 12, 52, 0.8), rgba(7, 14, 49, 0.925));
           border-bottom:1px solid var(--stroke);
         }
 
@@ -89,7 +89,7 @@
         }
         .navlinks a:hover{
             border-color:var(--stroke); 
-            background:rgba(255,255,255,.05)
+            background:rgba(182, 179, 202, 0.18)
         }
 
         /* HERO */
@@ -99,10 +99,13 @@
         }
         .split{
             display:grid; 
+            border-radius: 20px;
             grid-template-columns:1.1fr 0.9fr; 
             gap:28px; 
             align-items:center;
-            background:radial-gradient(circle at 30% 30%, rgba(124,92,255,.35), transparent 60%);
+            background:radial-gradient(circle at 30% 30%, #0d1b47, transparent 60%);
+            box-shadow: 0 0 20px #ffffff7b, var(--shadow);
+
         }
         .card{
             background:var(--card); 
@@ -186,7 +189,7 @@
             aspect-ratio:1; 
             border-radius:50%;
             background: radial-gradient(circle at 50% 30%, rgba(255,255,255,.12), rgba(255,255,255,.02) 60%),
-                      linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.02));
+            linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.02));
             border:5px solid white; 
             box-shadow: inset 0 0 50px rgba(46, 112, 212, 0.71), var(--shadow);
             box-shadow: 0 0 20px rgba(228, 189, 172, 0.71), var(--shadow);
@@ -403,19 +406,16 @@
         <section id="skills" class="skills">
           <div class="card" style="padding:24px">
             <h2 style="margin-top:0">Skills</h2>
-            <div class="tags">
-              <span class="tag">HTML5</span>
-              <span class="tag">CSS3</span>
-              <span class="tag">JavaScript (ES6+)</span>
-              <span class="tag">React</span>
-              <span class="tag">Node.js</span>
-              <span class="tag">Express</span>
-              <span class="tag">MongoDB</span>
-              <span class="tag">Git & GitHub</span>
-              <span class="tag">REST APIs</span>
-              <span class="tag">Tailwind CSS</span>
-              <span class="tag">Figma</span>
-            </div>
+            <div class="lang"></div>
+            <div class="lang"></div>
+            <div class="lang"></div>
+            <div class="lang"></div>
+          </div>
+          <div class="card">
+            <div class="lang"></div>
+            <div class="lang"></div>
+            <div class="lang"></div>
+            <div class="lang"></div>
           </div>
         </section>
 
