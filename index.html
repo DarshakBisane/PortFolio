@@ -117,11 +117,70 @@
         position:relative;
         overflow:hidden
     }
-    .eyebrow{
+    .animated-text{
         font-size:.9rem; 
         color:var(--muted); 
         letter-spacing:.2em; 
         text-transform:uppercase
+    }
+    .animated-text span{
+        font-size: 40px;
+        font-weight: 600;
+        min-width: 280px;
+    }
+
+    .animated-text span{
+        position: relative;
+    }
+
+    .animated-text span::before{
+        content: "DARSHAK BISANE";
+        color: #ffffff;
+        animation: words 20s infinite;
+    }
+
+    .animated-text span::after{
+        content: "";
+        position: absolute;
+        width: calc(100% + 8px);
+        height: 100%;
+        background-color: #0d1b47;
+        border-left: 2px solid #ffffff;
+        right: -8px;
+        animation: cursor .8s infinite, typing 20s steps(14) infinite;
+    }
+
+    @keyframes cursor {
+        to{
+            border-left: 2px solid #ff7f5000;
+        }
+    }
+
+    @keyframes words {
+        0%,20%{
+            content: "DARSHAK BISANE";
+        }
+        21%,40%{
+            content: "CODER";
+        }
+        41%,60%{
+            content: "PROGRAMER";
+        }
+        61%,80%{
+            content: "DEVELOPER";
+        }
+        81%,100%{
+            content: "DESIGNER";
+        }
+    }
+
+    @keyframes typing {
+        10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
+            width: 0;
+        }
+        5%,20%,25%,40%,45%,60%,65%,80%,85%{
+           width: calc(100% + 8px);
+        }
     }
     h1{
         font-size:clamp(2.2rem, 5vw, 3.6rem); 
@@ -182,8 +241,9 @@
         background: radial-gradient(circle at 50% 30%, rgba(255,255,255,.12), rgba(255,255,255,.02) 60%),
         linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.02));
         border:5px solid white; 
-        box-shadow: inset 0 0 50px rgba(46, 112, 212, 0.71), var(--shadow);
-        box-shadow: 0 0 20px rgba(228, 189, 172, 0.71), var(--shadow);
+        box-shadow: inset 0 0 50px rgba(46, 112, 212, 0.71), 
+            0 0 20px rgba(228, 189, 172, 0.71), 
+            var(--shadow);
     }
     .dial{
         position:absolute; 
@@ -390,7 +450,7 @@
     <section class="hero">
       <div class="split">
         <div class="left">
-          <div class="eyebrow">Hello, I'm,<br> <span>DARSHAK BISANE</span> </div>
+          <div class="animated-text">Hello, I'm,<br> <span></span> </div>
          
           <p class="subtitle">Full-stack Developer • MERN • Cloud & Data Enthusiast</p>
           <div class="chips">
